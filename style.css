@@ -28,12 +28,17 @@
     
         height: 300px;
         position: relative;          /* referência para o posicionamento interno */
-        overflow: hidden;       /* impede que o conteúdo saia do header */
-
-      
-      
-    
+        overflow: hidden;       /* impede que o conteúdo saia do header */ 
+    }
+    #card-logo img{
+        position: absolute;
        
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        z-index: 10; /* 🔺 Fica acima da imagem */
+        width: 60px; /* ajusto conforme necessário */
+        
     }
     header img{
         width: 280px;
@@ -52,6 +57,26 @@
         transform: translateY(-50%);
 
     }
+ 
+
+   
+      #display-card-name, #display-card-vali,  #display-card-number{
+        position: absolute;
+        top: 230px; /* ajuste conforme necessário */
+        left: 30px;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-family: 'Courier New', Courier, monospace;
+        z-index: 2;
+
+      }
+      #display-card-vali{
+           left: 200px;
+      }
+      #display-card-number{
+        top: 200px;
+      }
     form{
         margin-top: 30px;
       
@@ -79,7 +104,7 @@
         padding: 10px;
         margin-bottom: 4PX;
         width: 100%;
-       width: 340px;
+       width: 330px;
        
     }
   .expiry-date input{
@@ -90,7 +115,7 @@
   }
   .expiry-date .cvc{
     width: 100%;
-    width: 213px;
+    width: 200px;
   
   }
   
