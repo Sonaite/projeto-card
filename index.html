@@ -22,18 +22,22 @@
 
            
 
-             <label for="exp-date">EXP. DATE (MM / YY)</label> <label for="icvc">CVC</label>
+            
              <div class="expiry-date">
-                 <input type="text" id="expiry-month" name="expiry-month" maxlength="2" placeholder="MM" required >
-              
-                 <input type="text" id="expiry-year" name="expiry-year" maxlength="2" placeholder="YY" required >
+                <div class="inline">
+                    <label for="expiry-month">EXP.DATE (MM/YY)</label>
+                     <input type="text" id="expiry-month" name="expiry-month" maxlength="2" placeholder="MM" required >
+                     <input type="text" id="expiry-year" name="expiry-year" maxlength="2" placeholder="YY" required >
+                </div>
                   
-                 
-                 <input class="cvc" type="text" id="icvc" name="cvc" maxlength="3" placeholder="e.g 123" required >
+                 <div class="inline">
+                     <label for="icvc">CVC</label>
+                     <input  class="cvc" type="text" id="icvc" name="cvc" maxlength="3" placeholder="e.g 123" required >
+                 </div>
              </div>
             
         </form>
-        <a href="#">Confirm</a>
+            <button type="submit">Confirm</button>
     </main>
     
 </body>
