@@ -16,9 +16,9 @@
         </header>
         <form action="cadastro.java">
             <label for="iname">CARDHOLDER NAME</label>
-            <input type="text" name="name" id="iname" placeholder="e.g Jane Appleseed">
+            <input type="text" name="name" id="iname" placeholder="e.g Jane Appleseed" required>
             <label for="inunber">CARD NUMBER</label >
-             <input type="text" name="number" id="inunber" placeholder="e.g 1234 5678 9123 0000">
+             <input type="text" name="number" id="inunber" placeholder="e.g 1234 5678 9123 0000" required maxlength="16" minlength="16">
 
            
 
@@ -26,13 +26,13 @@
              <div class="expiry-date">
                 <div class="inline">
                     <label for="expiry-month">EXP.DATE (MM/YY)</label>
-                     <input type="text" id="expiry-month" name="expiry-month" maxlength="2" placeholder="MM" required >
-                     <input type="text" id="expiry-year" name="expiry-year" maxlength="2" placeholder="YY" required >
+                     <input type="text" id="expiry-month" name="expiry-month"  minlength="2" maxlength="2" placeholder="MM" required >
+                     <input type="text" id="expiry-year" name="expiry-year" minlength="2"  maxlength="2" placeholder="YY" required >
                 </div>
                   
                  <div class="inline">
                      <label for="icvc">CVC</label>
-                     <input  class="cvc" type="text" id="icvc" name="cvc" maxlength="3" placeholder="e.g 123" required >
+                     <input  class="cvc" type="text" id="icvc" name="cvc" minlength="3" maxlength="3" placeholder="e.g 123" required >
                  </div>
              </div>
              <button type="submit">Confirm</button>
