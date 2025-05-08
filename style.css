@@ -25,6 +25,8 @@
         height: 100%;
         border-radius: 10px;
         margin: auto;
+        overflow-x: hidden; /* bloqueia rolagem lateral */
+        overflow-y: hidden;
         
      
       
@@ -190,10 +192,11 @@
     order: 1; /* mantém o main à esquerda */
     margin-left: 164px;
    
-    overflow-y: auto;
+   
+   
    
   }
-
+ 
   button {
     margin-left: 20px; /* ou ajuste fino, tipo 30px */
     margin-right: 0;
