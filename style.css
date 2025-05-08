@@ -19,8 +19,8 @@
     }
     main{
     
-      padding-top: 100px;
-        background-color:rgb(243, 236, 236);
+      padding-top: 90px;
+       background-color: white;
         width: 100%;
         height: 100%;
         border-radius: 10px;
@@ -58,10 +58,11 @@
         position: absolute;
        
         top: 74%;
-        left: 10%;
+        left: -13%;
         transform: translateY(-50%);
         z-index: 10; /* 🔺 Fica acima da imagem */
         width: 60px; /* ajusto conforme necessário */
+     
         
     }
    
@@ -164,21 +165,17 @@
   
 
   body {
-    display: flex;
-    flex-direction: row;
+    display: flex; /*fica lado a lado*/
+    
     height: 100vh;
-  ;
+  
    
   }
 
   header {
-    position: relative;
-    width: 50%;
+   
+    width: 40%;
     height: 100vh;
-    background-image: url(images/bg-main-mobile.png);
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
     order: 1; /* joga o header pra direita */
    
    
@@ -191,29 +188,18 @@
     padding: 30px;
     box-sizing: border-box;
     order: 1; /* mantém o main à esquerda */
+    margin-left: 164px;
+   
     overflow-y: auto;
    
   }
-  header .cardfront{
-    position: absolute;
+
+  button {
+    margin-left: 20px; /* ou ajuste fino, tipo 30px */
+    margin-right: 0;
+  }
   
-    top: 35%;
-    left: 10%;
-    transform: translateY(-50%);
-    z-index: 2;
-   
 
-}
-header img{
-  width: 280px;
-  position: absolute;
-
-  top: 74%;
-  left: 63%;
-  transform: translateY(-50%);
-  z-index: 2;
-
-}
 
 
 
