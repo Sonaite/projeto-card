@@ -48,6 +48,19 @@
       left: 80px;
       z-index: 2;
     }
+    .card-info {
+     
+      position: absolute;
+  top: -52px; /* igual ao top da .cardfront */
+   left: -89px;
+  width: 300px; /* igual à largura do cartão */
+ 
+
+      
+     
+    }
+    
+  
     
     .cards img {
       width: 300px;
@@ -67,6 +80,7 @@
      
         
     }
+   
    
      .cardfront{
       position: absolute;
@@ -183,6 +197,8 @@
    
   
   }
+ 
+  
 
   main {
  
@@ -190,11 +206,13 @@
     padding: 30px;
     box-sizing: border-box;
     order: 1; /* mantém o main à esquerda */
-    margin-left: 164px;
+    margin-left: 170px;
+    padding: 0;
+
    
-   
-   
-   
+  }
+  .cards{
+   top:40px;
   }
  
   button {
