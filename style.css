@@ -12,12 +12,12 @@
         height: 100%;
         width: 100%;
         overflow-x: hidden; /* bloqueia rolagem lateral */
-        overflow-y: hidden;
+      
        
        
        
     }
-    main{
+    main{ 
     
       padding-top: 90px;
        background-color: white;
@@ -201,23 +201,27 @@
   
 
   main {
- 
-    width: 90%;
+    background-color: antiquewhite;
+    overflow-y: hidden;
+    width: 60%;
     padding: 30px;
     box-sizing: border-box;
     order: 1; /* mantém o main à esquerda */
     margin-left: 170px;
     padding: 0;
+   margin-top: -20px;
+   
 
    
   }
   .cards{
-   top:40px;
+   top:20px;
   }
  
   button {
     margin-left: 20px; /* ou ajuste fino, tipo 30px */
     margin-right: 0;
+   
   }
   
 
