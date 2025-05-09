@@ -12,7 +12,7 @@
         height: 100%;
         width: 100%;
         overflow-x: hidden; /* bloqueia rolagem lateral */
-      
+        overflow-y: hidden;
        
        
        
@@ -26,7 +26,7 @@
         border-radius: 10px;
         margin: auto;
         overflow-x: hidden; /* bloqueia rolagem lateral */
-        overflow-y: hidden;
+    
         
      
       
@@ -40,6 +40,7 @@
       width: 100vw;
       height: 260px;
       margin-top: 0;
+    
     }
    
     .cards {
