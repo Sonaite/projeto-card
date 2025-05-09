@@ -65,6 +65,17 @@
         </form>
             
     </main>
+    <script>
+        // Corrigido: agora usando o ID correto do input
+        const inputName = document.getElementById('iname');
+        const displayName = document.getElementById('display-card-name');
+      
+        inputName.addEventListener('input', function () {
+          displayName.textContent = inputName.value || 'JANE APPLESEED';
+        });
+      </script>
+      
+      
     
 </body>
 </html>
