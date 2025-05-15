@@ -8,8 +8,11 @@
 </head>
 <body>
 
+      <div id="container">
 
-    <div class="cards">
+  
+    <header>
+         <div class="cards">
         <img class="cardbcak" src="images/bg-card-back.png" alt="card">
         <div id="display-card-cvc">0 0 0</div>
         <img class="cardfront" src="images/bg-card-front.png" alt="cardfront">
@@ -25,9 +28,6 @@
         
           </div>
     </div>
-  
-    <header>
-     
     
     </header>
     <main>
@@ -73,9 +73,18 @@
         inputName.addEventListener('input', function () {
           displayName.textContent = inputName.value || 'JANE APPLESEED';
         });
+        
+  const inputCvc = document.getElementById('icvc');
+    const displayCvc = document.getElementById('display-card-cvc');
+
+    inputCvc.addEventListener('input', function() {
+        displayCvc.textContent = inputCvc.value || '000';  // Atualiza o texto no display de CVC
+    });
+
+        
       </script>
       
       
-    
+    </div>
 </body>
 </html>

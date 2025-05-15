@@ -4,29 +4,55 @@
     *{
       padding: 0;
       margin: 0;
+       box-sizing: border-box;
        
     }
-    html, body{
+    html,body{
      
 
-        height: 100%;
-        width: 100%;
-        overflow-x: hidden; /* bloqueia rolagem lateral */
-        overflow-y: hidden;
-       
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(53, 187, 211);
+ height: 100%;
+  width: 100%;
+  overflow: hidden;
        
        
     }
+    #container {
+      
+ height: 90vh; /* 90% da altura da viewport */
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: auto;
+
+
+ 
+
+   
+}
+   
     main{ 
+       
+  
     
       padding-top: 90px;
-       background-color: white;
-        width: 100%;
-        height: 100%;
+   
+       
         border-radius: 10px;
-        margin: auto;
+   
         overflow-x: hidden; /* bloqueia rolagem lateral */
+      overflow-y: hidden;
     
+      
+      
+      
         
      
       
@@ -37,29 +63,33 @@
       background-image: url(images/bg-main-mobile.png);
       background-repeat: no-repeat;
       background-size: cover;
-      width: 100vw;
-      height: 260px;
+      width: 100%;
+      height: 180px;
       margin-top: 0;
+      
     
     }
    
     .cards {
-      position: absolute; /* ❗ tira do fluxo e evita criar espaço */
-      top: 60px;           /* ajuste conforme necessário */
-      left: 80px;
-      z-index: 2;
+        position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  max-width: 100%;
     }
     .card-info {
      
       position: absolute;
   top: -52px; /* igual ao top da .cardfront */
-   left: -89px;
+   left: -55px;
   width: 300px; /* igual à largura do cartão */
  
 
       
      
     }
+ 
     
   
     
@@ -74,7 +104,7 @@
         position: absolute;
        
         top: 74%;
-        left: -13%;
+        left: -1%;
         transform: translateY(-50%);
         z-index: 10; /* 🔺 Fica acima da imagem */
         width: 60px; /* ajusto conforme necessário */
@@ -86,7 +116,7 @@
      .cardfront{
       position: absolute;
       top:93px;
-      right: 60px;
+      right: 10px;
       
 
     }
@@ -177,146 +207,3 @@
       
     }
   
-/* Responsivo para tablets em pé ou deitado */
-@media screen and (min-width: 768px) and (max-width: 992px){
-  
-
-  body {
-    display: flex; /*fica lado a lado*/
-    
-    height: 100vh;
-  
-   
-  }
-
-  header {
-   
-    width: 40%;
-    height: 100vh;
-    order: 1; /* joga o header pra direita */
-   
-   
-  
-  }
- 
-  
-
-  main {
-    
-    overflow-y: hidden;
-    width: 60%;
-    padding: 30px;
-    box-sizing: border-box;
-    order: 1; /* mantém o main à esquerda */
-    margin-left: 170px;
-    padding: 0;
-   margin-top: -20px;
-   
-
-   
-  }
-  .cards{
-   top:20px;
-  }
- 
-
-  button {
-    margin-left: 20px; /* ou ajuste fino, tipo 30px */
-    margin-right: 0;
-   
-  }
-  
-
-
-
-
-}
-
-/* Responsivo para desktops ++ */
-
-
-  @media screen and (min-width: 992px) {
-    html {
-    background-image: linear-gradient(to right, rgba(38, 1, 53, 0.384), rgba(255, 255, 255, 0.637));
-    }
-    main{
-      border-radius: 0;
-      
-      
-    }
-  
-    body {
-      
-      display: flex; /* igual ao tablet */
-      /* garante que o fundo ocupe a tela toda */
-  margin: auto;
-      width: 1000px;
-      height: 500px;
-      position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-    
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.363);
-      
-       
-   
-     
-      
-    }
-    header{
-      height: 100vh;
-      width: 500px;
-    }
-    .cards{
-      margin-left: 84px;
-      margin-top: 39px;
-
-    }
-    #display-card-cvc {
-      top: 242px;
-      right: -260px;
-      z-index: 10;
-      font-size: 1em;
-      width: 36px;
-     
-    }
-    
-  
-  form{
-   margin-left: 190px;
-  }
-  button{
-    margin-left: 20px; /* ou ajuste fino, tipo 30px */
-    margin-right: 0;
-
-  }
-  .cards .cardbcak{
-    position: absolute;
-    top: 170px;
-   
-  }
-  .cardfront{
-    top:0px;
-    left: -50px;
-  }
- 
-  .card-info {
-   top: -140px; 
- 
-  }
-  #card-logo img{
-    top:38px;
-    left: -13px;
-  }
-  
-   
-  }
-  
- 
-   
-
-
-
-
-
