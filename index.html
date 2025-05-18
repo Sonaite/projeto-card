@@ -73,6 +73,12 @@
         inputName.addEventListener('input', function () {
           displayName.textContent = inputName.value || 'JANE APPLESEED';
         });
+         const inputNunber = document.getElementById('inunber');
+        const displayNunber = document.getElementById('display-card-number');
+      
+        inputNunber.addEventListener('input', function () {
+          displayNunber.textContent = inputNunber.value || '0000 0000 0000 0000';
+        });
         
   const inputCvc = document.getElementById('icvc');
     const displayCvc = document.getElementById('display-card-cvc');
@@ -80,6 +86,21 @@
     inputCvc.addEventListener('input', function() {
         displayCvc.textContent = inputCvc.value || '000';  // Atualiza o texto no display de CVC
     });
+
+const inputMonth = document.getElementById('expiry-month');
+const inputYear = document.getElementById('expiry-year');
+const displayData = document.getElementById('display-card-vali');
+
+function updateExpiry() {
+  const month = inputMonth.value.padStart(2, '0') || '00';
+  const year = inputYear.value.padStart(2, '0') || '00';
+  displayData.textContent = `${month}/${year}`;
+}
+
+inputMonth.addEventListener('input', updateExpiry);
+inputYear.addEventListener('input', updateExpiry);
+
+
 
         
       </script>
