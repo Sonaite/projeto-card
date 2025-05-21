@@ -43,7 +43,8 @@
           
 
             <label for="inunber">CARD NUMBER</label >
-             <input type="text" name="number" id="inunber" placeholder="e.g 1234 5678 9123 0000" required maxlength="16" minlength="16">
+             <input type="text" name="number" id="inunber" placeholder="e.g 1234 5678 9123 0000" required maxlength="19"   pattern="\d{4} \d{4} \d{4} \d{4}"
+       required />
 
            
 
@@ -100,6 +101,16 @@ function updateExpiry() {
 inputMonth.addEventListener('input', updateExpiry);
 inputYear.addEventListener('input', updateExpiry);
 
+
+
+//digitar numero come espaço
+  const numberInput = document.getElementById('inunber');
+
+  numberInput.addEventListener('input', (e) => {
+    let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não for número
+    value = value.replace(/(.{4})/g, '$1 ').trim(); // Adiciona espaço a cada 4 dígitos
+    e.target.value = value;
+  });
 
 
         
