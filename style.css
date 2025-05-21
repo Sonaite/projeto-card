@@ -204,6 +204,21 @@ background-image: linear-gradient(to top, rgba(49, 4, 66, 0.466), rgba(240, 220,
     button:hover{
       background-color: rgba(45, 6, 82, 0.747);
     }
+
+    #thankyou-message img{
+      display: block;
+      margin: auto;
+
+    }
+      #thankyou-message h1, p{
+        color: rgba(30, 7, 51, 0.959);
+        padding-top: 10px;
+        text-align: center;
+      }
+        #thankyou-message p{
+          color: rgba(41, 4, 41, 0.562);
+        }
+
         @media (orientation: landscape) and (min-width: 667px) and (max-width: 992px){
 
 

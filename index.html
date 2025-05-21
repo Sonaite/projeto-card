@@ -32,7 +32,7 @@
     </header>
     <main>
      
-        <form action="cadastro.java">
+        <form id="cardForm" action="cadastro.java">
             <label for="iname">CARDHOLDER NAME</label>
             <input type="text" name="name" id="iname" placeholder="e.g Jane Appleseed" required>
 
@@ -64,6 +64,13 @@
              <button type="submit">Confirm</button>
             
         </form>
+
+          <div id="thankyou-message" style="display:none; margin-top: 20px; color: green; font-weight: bold;">
+               <img src="images/icon-complete.svg" alt="theck">
+               <h1>THANK YOU!</h1>
+               <p>we've added your card details</p>
+       <button type="submit">Continui</button>
+  </div>
             
     </main>
     <script>
@@ -111,6 +118,20 @@ inputYear.addEventListener('input', updateExpiry);
     value = value.replace(/(.{4})/g, '$1 ').trim(); // Adiciona espaço a cada 4 dígitos
     e.target.value = value;
   });
+
+
+  const form = document.getElementById('cardForm');
+const thankyou = document.getElementById('thankyou-message');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // evita que a página recarregue
+
+  form.style.display = 'none';  // esconde o form
+  thankyou.style.display = 'block';  // mostra a mensagem
+
+  // aqui você pode ainda pegar os dados e enviar via AJAX/fetch se quiser
+});
+
 
 
         
