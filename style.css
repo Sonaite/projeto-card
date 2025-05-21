@@ -13,7 +13,7 @@
    display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(80, 21, 62);
+background-image: linear-gradient(to top, rgba(49, 4, 66, 0.466), rgba(240, 220, 248, 0.192));
  height: 100%;
   width: 100%;
   overflow: hidden;
@@ -172,7 +172,7 @@
   .expiry-date input{
   
     display: inline-flex;
-    width: 30px;
+    width: 50px;
      margin-right: -20px;
   }
   .expiry-date .cvc{
@@ -252,4 +252,87 @@
        
       
     }
+    @media screen and (min-width: 992px){
+       #container {
+       
+    flex-direction: row;
+     width: 1080px;
+     height: 570px;
+    
+    }
+    header{
+      display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; 
+   
+    width: 35%;
+    height: 100%; /* Para ocupar altura toda */
+
+    }
+     .cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-bottom: 100px;
+
+ 
+  
+ 
+  top: auto;
+}
+.cardfront {
+  transform: translateY(-140px); /* para cima */
+}
+
+.cardbcak {
+  transform: translateY(130px); /* para baixo */
+  margin-left: 120px;
+}
+ .card-info {
+     
+      position: absolute;
+  top: -178px; /* igual ao top da .cardfront */
+   left: 40px;
+  width: 300px; /* igual à largura do cartão */
+ 
+
+      
+     
+    }
+        
+    #card-logo img{
+        position: absolute;
+       
+        top: 4%;
+        left: 20%;
+        transform: translateY(-50%);
+        z-index: 10; /* 🔺 Fica acima da imagem */
+        width: 60px; /* ajusto conforme necessário */
+     
+        
+    }
+      #display-card-cvc{
+          position: absolute;
+          top: 204px;
+          right: 20px;
+          font-size: 0.8em;
+          color:white;
+         
+    }
+
+
+
+    main{
+       width: 50%;
+        display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza conteúdo verticalmente */
+    align-items: center;     /* opcional: centraliza horizontalmente também */
+    height: 100%;
+    margin-left: 100px;
+    }
+  }
   
